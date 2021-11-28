@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// on crée le model Sauce pour le stocker dans la base de donnée
 const sauceSchema = mongoose.Schema({
     userId: { type: String, required: true },
     name: { type: String, required: true },
@@ -14,4 +15,5 @@ const sauceSchema = mongoose.Schema({
     usersDisliked: { type: [String] },
 })
 
+// exportation de la sauce
 module.exports = mongoose.model('Sauce', sauceSchema)
